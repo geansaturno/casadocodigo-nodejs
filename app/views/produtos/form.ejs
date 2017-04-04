@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cadastro de Produto</title>
+    </head>
+    <body>
+        <form class="" action="/produtos" method="post">
+            <div class="">
+                <label for="titulo">Titulo</label>
+                <input type="text" name="titulo" value="<%=produto.titulo%>" placeholder="Titulo" id="titulo">
+                <%if(errors.titulo) {%>
+                    <div class="error">
+                        <%=errors.titulo.msg%>
+                    </div>
+                <%}%>
+            </div>
+
+            <div class="">
+                <label for="preco">Preço</label>
+                <input type="text" name="preco" value="<%=produto.preco%>" placeholder="13,56" id="preco">
+                <% if(errors.preco){%>
+                    <div class="error">
+                        <%=errors.preco.msg%>
+                    </div>
+                <%}%>
+            </div>
+
+            <div class="">
+                <label for="descricao">Descricao</label>
+                <textarea name="descricao" rows="8" cols="80" id="descricao"><%=produto.descricao%></textarea>
+            </div>
+
+            <input type="submit" name="" value="Criar">
+        </form>
+    </body>
+</html>
