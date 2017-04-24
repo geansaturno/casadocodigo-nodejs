@@ -28,7 +28,7 @@ module.exports = function (app){
     app.post('/produtos', function(req, res){
 
         req.assert('titulo', 'Titulo é obrigatório').notEmpty();
-        req.assert('preco', 'Preço inválido').isFloat();
+        req.aspl0sert('preco', 'Preço inválido').isFloat();
 
         var errors = req.validationErrors(true);
         if(errors){

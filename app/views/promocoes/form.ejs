@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cadastro de promoções</title>
+    </head>
+    <body>
+        <div class="">
+            <h1>Cadastro de promoções</h1>
+        </div>
+        <form class="" action="/promocoes" method="post">
+            <div class="">
+                <label for="">Mensagem</label>
+                <input type="text" name="msg" value="">
+            </div>
+            <div class="">
+                <label for="">Livro</label>
+                <select class="" name="livro_id">
+                    <%for(var i = 0; i < livros.length; i++){%>
+                        <option value="<%=livros[i].id%>"><%=livros[i].titulo%></option>
+                    <%}%>
+                </select>
+            </div>
+            <div class="">
+                <input type="submit" name="" value="Enviar">
+            </div>
+        </form>
+    </body>
+</html>
