@@ -21,4 +21,4 @@ module.exports = function(){
     app.set('json spaces', 2);
 
     return app;
-}
+};

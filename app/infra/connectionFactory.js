@@ -3,9 +3,9 @@ var mysql = require('mysql');
 function createDbConection() {
 
     console.log(process.env.NODE_ENV);
-
+    var connection = null;
     if(!process.env .NODE_ENV){
-        var connection = mysql.createConnection({
+        connection = mysql.createConnection({
             "host": "localhost",
             "user": "root",
             "password" : "",
@@ -15,7 +15,7 @@ function createDbConection() {
 
     if(process.env.NODE_ENV == "test"){
         console.log();
-        var connection = mysql.createConnection({
+        connection = mysql.createConnection({
             "host": "localhost",
             "user": "root",
             "password" : "",
@@ -28,4 +28,4 @@ function createDbConection() {
 
 module.exports = function(){
     return createDbConection;
-}
+};

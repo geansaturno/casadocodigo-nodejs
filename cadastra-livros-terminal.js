@@ -9,7 +9,7 @@ var config = {
         'Accept':'application/json',
         'Content-type':'application/json'
     }
-}
+};
 
 var cliente = http.request(config, function(res){
     console.log(res.statusCode);
@@ -23,6 +23,6 @@ var produto = {
     titulo : '',
     descricao : 'Este é um ótimo livro java',
     preco: 100
-}
+};
 
 cliente.end(JSON.stringify(produto));

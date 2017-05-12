@@ -12,7 +12,7 @@ describe("#ProdutosController", function(){
             } else {
                 console.log(ex);
             }
-        })
+        });
     });
 
     it('#listagem', function(done){
